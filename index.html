@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASCII Webcam</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>ASCII WEBCAM</h1>
+    <p class="subtitle">sua câmera em caracteres</p>
+  </header>
+
+  <div id="controls">
+    <label>
+      Resolução
+      <input type="range" id="resolution" min="40" max="200" value="100" step="10">
+      <span id="resolution-value">100</span>
+    </label>
+    <button id="toggle-color">🎨 Modo Cor</button>
+    <button id="snapshot">📸 Salvar PNG</button>
+  </div>
+
+  <canvas id="ascii-canvas"></canvas>
+
+  <!-- elementos escondidos que fazem o trabalho sujo -->
+  <video id="video" autoplay playsinline muted></video>
+  <canvas id="hidden-canvas"></canvas>
+
+  <footer>
+    <span id="fps">-- fps</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
